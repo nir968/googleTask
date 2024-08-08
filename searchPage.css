@@ -1,0 +1,802 @@
+body {
+    font-size: 13px; 
+    display: flex;
+    font-family: arial, sans-serif;
+    padding: none;
+    overflow-x: hidden;
+    /*background-color: #202124;*/
+}
+
+
+.img-fluid rounded-end{
+    height: 20;
+    max-width:20px;
+    border-top-right-radius: var(--bs-border-radius) !important;
+    border-bottom-right-radius: var(--bs-border-radius) !important;
+
+}
+
+
+.top {
+    width: 100%;
+    z-index: 4;
+    display: inline-block;
+    display: flex;
+}
+
+
+.google-image {
+    position: relative;
+    left: 1.80rem;
+    top: 2.3rem;
+}
+
+
+.input-group-text {
+    z-index: 4;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    flex: 1;
+    padding: 12px;
+    text-align: left;
+    outline: none;  
+}
+
+
+#input-group-text{
+    margin-left: 5rem;
+    position:absolute;
+}
+
+
+.input-group {
+   
+    z-index: 4;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    left: 5.5rem;
+    box-shadow: 1px 1px 7px 1px #e3e3e3;
+    border-radius: 40px;
+    width: 43rem;
+    margin-top: 1.5rem;
+    border: 0.8px solid #e2e2e2;
+    border-radius: 40px;
+   
+}
+
+
+#input-group-text:focus-within {
+    background-color: white;
+    z-index: 4;
+    width: 70rem;
+}
+
+
+#input-group-text.expanded {
+    z-index: 4;
+    width: 70rem;
+}
+
+
+.input-group:hover {
+    box-shadow: 1px 1px 7px 1px #d4d4d4;
+    border-radius: 40px;
+}
+
+
+.btn-icon{
+    background-color: white;
+
+}
+
+
+.btn-icon2 {
+    z-index: 4;
+    background-color: white;
+
+    position:static;
+    margin-right: 0.7rem;
+    width: 1.6rem;
+    height: 0rem;
+    margin-top: 0.9rem;
+    background-color: transparent;
+    border: none;
+}
+
+
+.search-btn .btn-icon2 svg path {
+    fill: #4285f4;
+}
+
+
+.vertical-line-2 {
+    border-left: 1px solid #ccc;
+    height: 80%;
+}
+
+
+.results-sidebar-2 {
+    background-color: white;
+    position: relative;
+    top: calc(100%);
+    left: 0;
+    width: calc(100% - 24px);
+    background-color: #ffffff;
+    border: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+
+.input-group:focus-within .results-sidebar-2 {
+    display: block;   
+    z-index: 4;
+}
+
+
+.results-sidebar-2 li:hover {
+    background-color: #eeeeee;
+}
+
+
+hr{
+    padding: none;
+    width: 97%;
+    margin-left: 2rem;
+    position: relative;
+    color: gray;
+}
+
+
+#close-search {
+    display: none; /* מסתיר את ה-X בהתחלה */
+    margin-top: 1rem;
+    margin-right: 2rem;
+}
+
+
+.vertical-line {
+    display: none;
+   
+    top: 0.6rem;
+    right: 1rem;
+    border-left: 0.1rem solid #dbdbdb;
+    height: 1.8rem;
+}
+
+
+.input-group-text:focus-within #vertical-line ,
+.input-group-text:not(:placeholder-shown) + #vertical-line {
+    display: inline-block; /* מציג את ה-X כאשר יש תוכן בשדה הטקסט */
+}
+
+
+.input-group-text:focus-within #close-search,
+.input-group-text:not(:placeholder-shown) + #close-search {
+    display: inline-block; /* מציג את ה-X כאשר יש תוכן בשדה הטקסט */
+}
+
+
+.vertical-line{
+    cursor: pointer;
+}
+
+
+.close-icon {
+    cursor: pointer;
+}
+
+
+.top-right {
+
+    z-index: 100;
+    position: relative;
+    overflow: hidden;
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
+    background-color: white;
+    transition: transform  ease; /* הוספת העצמה */
+}
+
+
+#sign-in{
+    border-radius: 2px;
+    font-size: 14px; 
+    width: 95px;
+    height: 35px;
+}
+
+
+  #sett{
+    position:fixed;
+    z-index: 1000;
+    color: rgb(85, 85, 85);
+    top:0.3rem;
+    right: 1.9rem;
+    position: relative;
+    display: inline-block;
+   
+}
+
+
+#sett::before{
+    z-index: 1000;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(221, 221, 221, 0.5);
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+}
+
+
+#sett:hover::before {
+    opacity: 1;
+}
+
+
+#apps-btn {
+    
+    position:fixed;
+    color: rgb(85, 85, 85);
+    top:0.3rem;
+    right: 1rem;
+    position: relative;
+    display: inline-block;
+  }
+
+
+  #apps-btn:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(221, 221, 221, 0.5);
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+  }
+
+
+  #apps-btn:hover::before {
+    opacity: 1;
+  }
+  
+  
+  .top-btn-all{
+    position: relative;
+    position: absolute;
+    margin-top: 6rem;
+    left: 0;
+    margin-left: 12rem;
+    text-decoration: none;
+  }
+
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    cursor: pointer; /* עכבר יחליק כשעל סרטון */
+}
+
+
+.video-container video {
+    width: 100%;
+    height: auto;
+}
+
+
+.btn-no-border{
+    color: #70757a;
+    border: none;
+    background-color: transparent;
+    font-size: 15px; 
+    text-decoration: none;
+}
+
+
+#all{
+    color: #1a73e8;
+}
+
+
+#more-dots{
+
+    vertical-align: middle;
+    font-size:medium;
+}
+
+
+.tools{
+    margin-left: 15rem;
+    position: relative;
+}
+
+  
+.tools::before {
+    content: "";
+    position: absolute;
+    top: -2px; 
+    left: -2px; 
+    width: calc(100% + 4px); 
+    height: calc(100% + 4px); 
+    border-radius: 5px; 
+    background-color: rgba(198, 197, 197, 0.2); 
+    z-index: -1;
+    opacity: 0; 
+}
+
+  
+  .tools:hover::before {
+    opacity: 1; 
+  }
+  .tools:hover::after{
+    opacity: 0; 
+  }
+
+
+  .tools:active:not(:hover),
+  .tools:focus:not(:active),
+  .tools:focus:not(:active):hover {
+      color: #1a73e8; /* צבע הכתב כחול */
+      background-color: #e8f0fe; /* רקע תכלת חצי שקוף */
+      border-radius: 5px; /* הוספת הרדיוס */
+  }
+  
+
+  .dropdown-toggle{
+   
+    margin-left: 32rem;
+    font-size: 15px; 
+    text-decoration: none;
+    color:#70757a;
+    background-color: #ffffff;
+    border: none;
+
+  }
+
+  
+  .top-btn-all {
+    display: flex;
+    flex-wrap: nowrap; 
+
+  }
+
+
+.dropdown-menu {
+    color: rgb(3, 3, 3);
+    background-color: #ffffff;
+    border: none;
+    box-shadow: 1px 1px 7px 1px #959595;
+}
+
+.dropdown-menu a:hover {
+    color: rgb(0, 0, 0); 
+    background-color: rgb(229, 229, 229); 
+}
+
+.dropdown-menu a:active {
+    transition: background-color 0.2s ease;
+    color: inherit;
+    background-color: inherit; 
+}
+
+.dropdown-toggle:hover{
+    color: #70757a;/* צבע הכתב כחול */
+    background-color: rgb(237, 237, 237); /* רקע תכלת */
+}
+
+
+.dropdown-toggle:active:not(:hover),
+.dropdown-toggle:focus:not(:active),
+.dropdown-toggle:focus:not(:active):hover {
+    color: #1a73e8; /* צבע הכתב כחול */
+    background-color: #e8f0fe;
+    /* רקע תכלת חצי שקוף */
+}
+.footer {
+    padding-left: 12rem;
+    padding-right: 12rem;
+    text-align:start;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 82%; /* קביעת גובה הפוטר ל־100% */
+  }
+
+  .line {
+    background-color: #ccc; /* צבע הקו */
+    height: 1px; /* גובה הקו */
+    width: 100%; /* רוחב הקו */
+    position: absolute;
+    top:0.2rem;
+    left: 0;
+  }
+  .line-blue{
+    text-align:center;
+    background-color: #1a73e8; /* צבע הקו */
+    height: 3px; /* גובה הקו */
+    width: 2rem; /* רוחב הקו */
+    position: absolute;
+    top: 0;
+    left: 12rem;
+  }
+
+.text-gray{
+   padding-top: 1.5rem;
+    font-size: 15px; 
+    color: rgb(121, 121, 121);
+}
+
+.rounded-end{
+    float: inline-end;
+}
+.mb-3{
+    padding-top: 1rem;
+    border: none;
+
+}
+
+.Arts-Home-page{
+
+    margin-left: 1rem;
+    font-size: 15px; 
+
+}
+
+.https-gta{
+    margin-left: 2.5rem;
+}
+
+.btn-no-border.btn-under-line{
+    padding: none;
+    font-size: 20px; 
+    color: #1a0dab;
+}
+.btn-under-line:hover{
+    text-decoration: underline;
+}
+.card-body{
+    text-align:left;
+    padding:0%;
+}
+
+.btn-no-border.btn-under-line-small{
+    font-size: 14px; 
+    float: left;
+    color: #1a0dab;
+    margin-right: 9px;
+    padding: 0;
+    padding-right: 5;
+
+}
+.btn-under-line-small:hover{
+    text-decoration: underline;
+}
+
+.card-text{
+    margin-left: 10px;
+}
+
+
+.top-all {
+    background-color: white;
+    width: 1000%;
+    z-index: 100;
+    position: fixed;
+    height: 5rem;
+    top: 0;
+    left: 0;
+    transition: top 0.5s, box-shadow 0.5s; /* הוספת אנימציה למעבר */
+}
+
+.top-all.scrolled {
+    top: 50px; /* השינוי של גובה התפריט לאחר הגלילה */
+}
+.buttons-container {
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+
+}
+
+#all-btn-work{
+    display: inline-block;
+
+    width:max-content;
+    position: relative;
+    left: 80rem;
+    bottom: 0rem;
+    z-index: -1;
+    
+}
+
+
+
+.questions{
+    font-size: 16px;
+}
+
+#dots{
+    font-size: 20px;
+}
+
+
+.gta-btn{
+    border: none;
+    outline: none;
+    font-size:1.5rem;
+    background-color: transparent;
+
+}
+
+
+.gta-btn:hover{
+    text-decoration: underline;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    width: 8rem;
+    float: inline-end;
+}
+
+.img-fluid2 {
+    max-width: 100%;
+    height: auto;
+    width: 10rem;
+    height:7rem;
+    float: inline-end;
+}
+
+.questions hr {
+    border: none; /* להסיר את הגבולות הרגילים */
+    height: 2px; /* הגובה של הקו */
+    background-color: #ccc; /* צבע הקו */
+    margin: 12px 0; /* מרווח בין הקווים */
+  }
+  .line-gta {
+    width: 15px;
+  }
+
+
+  .Big-gta-5-Photo {
+    width: 30rem;
+  }
+
+
+  .btn-steam {
+    border: none;
+    background-color: transparent;
+    color:#6b0096;
+
+
+  }
+
+  .btn-steam:hover {
+    text-decoration:underline
+  }
+
+
+  .ctn-under-line-blue button {
+    background-color: transparent; /* Set button background color to transparent */
+    border: none; /* Remove button border */
+    color: rgb(26, 13, 171); /* Set button text color to blue */
+    cursor: pointer; /* Change cursor to pointer when hovering over buttons */
+    text-decoration: none; /* Remove default button text decoration */
+    outline: none; /* Remove button outline */
+}
+
+.ctn-under-line-blue button:hover {
+    text-decoration: underline; /* Underline button text when hovering */
+}
+
+.gta-Google-text{
+
+    font-size: 14px;
+}
+
+.col-4{
+   right: 10px;
+}
+
+#Rev{
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+}
+#Rev:hover{
+    color: #6b0096;
+}
+
+
+#ing-person{
+    padding-bottom: 2px;
+}
+
+.Starts{
+    font-size: large;
+ display: flex;
+  gap: 20px; 
+  color: #70757a;
+
+}
+
+.Posting{
+    display:flex;
+    right: 4rem;
+}
+
+.rate-and-review{
+   position: relative;
+   width: 19rem;
+   padding: 8px;
+   outline: #9a9a9a;
+   border-radius: 4px solid gray;
+    
+}
+
+.rate-and{
+ position: absolute;
+}
+
+.card-reviews{
+    margin-top: 80px;
+    position: absolute;
+    
+    
+}
+.card-reviews-2{
+    margin-top: 18rem;
+
+}
+
+.col-11{
+    margin-left: 30px;
+}
+.line-gta-4{
+    position: absolute;
+    margin-top: 10px;
+    left:61% ;
+    height: 105rem;
+    border-left: 1px solid rgb(212, 212, 212);
+}
+
+.like-unlike{
+    gap: 3rem;
+    position: absolute;
+    display: inline-block;
+    margin-left: 17rem;
+   
+  
+}
+
+
+.like {
+    font-size: 18px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #494949;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%; 
+    border: 0.7px solid #b5b5b5; 
+    box-sizing: border-box; 
+    padding: 8px; 
+    position: relative; 
+
+  
+    transition: background-color 0.3s;
+}
+
+.like:hover {
+    background-color: #d3e4ff; 
+}
+
+.like:active {
+    background-color: #7ab3ff; 
+}
+
+/* אפקט אחרי לחיצה */
+.like:active::after {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+
+    width: 100%;
+    height: 100%; 
+    border-radius: 50%; 
+    background-color: #7ab3ff; /* צבע הקרקע */
+    opacity: 0; 
+}
+
+
+.hr-gta{
+   width: 28rem;
+    margin-right: 24rem;
+}
+
+
+.all-gta{
+    position: absolute;
+   
+}
+
+#forRent{
+    width: 8.8rem;
+    height: 5.5rem;
+    position: relative;
+}
+#forRent:hover{
+    cursor: pointer;
+}
+
+.moreResults{
+    position: relative;
+}
+
+.custom-button {
+    margin-left: 2rem;
+    width: 21rem;
+    margin-top: 7rem;
+    padding: 5px 10px; /* גודל הריווח בתוך הכפתור */
+    font-size: 16px; /* גודל הכתב בכפתור */
+    color: #333; /* צבע הכתב בכפתור */
+    background-color: #f5f5f5; /* צבע רקע הכפתור */
+    border: none; /* ללא מסגרת */
+    border-radius: 20px; /* פינות מעוגלות */
+    cursor: pointer; /* סמן העכבר */
+}
+
+.custom-button:hover {
+    background-color: #e0e0e0; /* צבע רקע בעת מעבר עכבר */
+    color: #555; /* צבע הכתב בעת מעבר עכבר */
+    text-decoration: underline solid rgb(0, 0, 184);
+}
+
+.custom-button-results {
+    margin-left: 11rem;
+    width: 21rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    padding: 5px 10px; /* גודל הריווח בתוך הכפתור */
+    font-size: 16px; /* גודל הכתב בכפתור */
+    color: #333; /* צבע הכתב בכפתור */
+    background-color: #f5f5f5; /* צבע רקע הכפתור */
+    border: none; /* ללא מסגרת */
+    border-radius: 20px; /* פינות מעוגלות */
+    cursor: pointer; /* סמן העכבר */
+    z-index: 2;
+}
+
+.custom-button-results:hover {
+    background-color: #e0e0e0; /* צבע רקע בעת מעבר עכבר */
+    color: #555; /* צבע הכתב בעת מעבר עכבר */
+    text-decoration: underline solid rgb(0, 0, 184);
+}
+
+.bottom-line{
+    position: absolute;
+    bottom: 4.85rem;
+    left: 0;
+    margin-right: 1rem;
+    width: 95%;
+    height: 2px;
+    background-color: #f5f5f5;
+    z-index: -1;
+}

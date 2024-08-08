@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grand Theft Auto</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+  <link href="searchPage.css" rel="stylesheet">
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+  <div class="top-all">
+
+
+  
+  <div class="top">
+
+
+
+
+    <span>
+      <img class="google-image" src="data:image/png;base64,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" width="90rem">
+    </span>
+    <span class="search-container">
+      <div class="input-group" id="input-group-text">
+        <input class="input-group-text" type="text" placeholder="Grand Theft Auto">   
+        <span class="close-icon" id="close-search"><span class="material-symbols-outlined">
+          close
+          </span>
+        </span> 
+         <span  class="vertical-line" id="vertical-line"></span>
+        <span class="btn-icon">
+          <span type="button" class="btn-icon2" id="voice">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path fill="#4285F4" d="M12 15c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v7c0 1.66 1.34 3 3 3z"/><path fill="#34A853" d="M11 18.92h2V22h-2z"/><path fill="#F4B400" d="M7 12H5c0 1.93.78 3.68 2.05 4.95l1.41-1.41C7.56 14.63 7 13.38 7 12z"/><path fill="#EA4335" d="M12 17c-1.38 0-2.63-.56-3.54-1.47l-1.41 1.41A6.99 6.99 0 0 0 12.01 19c3.87 0 6.98-3.14 6.98-7h-2c0 2.76-2.23 5-4.99 5z"/></svg>
+          </span>
+          <span type="button" class="btn-icon2" id="camera">
+            <img src="img/lens_icon.png" width="24" height="24">
+          </span>
+          <span class="search-btn">
+            <span type="button" class="btn-icon2"> 
+              <div class="search">
+                <svg focusable="false" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+              </div>
+            </span>
+          </span>
+        </span>
+        <span class="vertical-line-2"></span>
+        <ul class="results-sidebar-2">
+          <li><hr></li>
+          <li><img src="img/searchRes.png" width="100%"></li>
+        </ul>
+
+    </span>
+  </div>
+  
+
+</div>
+
+
+     
+</span>
+
+<div class="top-right-google">
+  <div class="buttons-container" id="all-btn-work">
+      <span class="material-symbols-outlined" id="sett">
+        settings
+      </span>
+      <span class="material-symbols-outlined" id="apps-btn">
+        apps
+      </span>
+    
+    <button class="btn btn-primary" id="sign-in" type="submit">Sign In</button>
+  </div></div>
+</div>
+
+
+  <div class="top-btn-all">
+    <button class="btn-no-border" id="all">All</button>
+    <button class="btn-no-border" >Images</button>
+    <button class="btn-no-border" >Shopping</button>
+    <button class="btn-no-border" >Videos</button>
+    <button class="btn-no-border" >News</button>
+    <button class="btn-no-border" > <span class="material-symbols-outlined" id="more-dots">
+      more_vert
+    </span>
+
+    <button class="btn-no-border tools" >Tools</button>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        SafeSearch
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Filter explicit result</a></li>
+        <li><a class="dropdown-item" href="#">Blur explicit  images</a></li>
+        <li><a class="dropdown-item" href="#">Off</a></li>
+        <li><a class="dropdown-item" href="#"></a></li>
+        <li><a class="dropdown-item red" href="#">More about SafeSearch</a></li>
+      </ul>
+    </div>
+   
+  </div>
+  
+  <div class="footer">
+    <div class="line-blue"></div>
+    <div class="line"></div>
+    <div class="text-gray">
+      About 310,000,000 results (0.41 seconds) 
+    </div>
+  
+<!-- כאן מתחילות הכרטיסיות -->
+  
+    <div class="row">
+        <div class="col-8">
+          
+    <div class="card mb-3" style="max-width: 42rem;">
+      <span class="img-si">
+        <img src="data:image/png;base64,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" width="3%" class="gta-1-img">
+      
+         <span class="Arts-Home-page">
+          https://www.rockstar.com › en-US
+         </span> 
+         
+      </span>
+      <cite class="https-gta" role="text">https://www.rockstargames.com › games › rockstar games › grand theft auto <span class="material-symbols-outlined more" id="more-dots">
+        more_vert
+      </span></span></cite>
+      <div class="row g-0">
+        <div class="col-md-0">
+        </div>
+        <div class="col-md-12">
+          <div class="card-body">
+            <img src="img/gta5.png" class="img-fluid" alt="...">
+            <span class="card-gta">
+              <button class="btn-no-border btn-under-line">Grand Theft Auto V - Download free - Rockstar Games</button>
+                <p class="card-text">Pull off daring co-operative Heists, enter adrenaline-fueled Stunt Races, compete in unique Adversary Modes, or hang out in social spaces including nightclubs, ...<br>
+             
+                  <button  class="btn-no-border btn-under-line-small" >Just 50$ </button>
+                  <button  class="btn-no-border btn-under-line-small" >Online</button>
+                  <button  class="btn-no-border btn-under-line-small" >Story</button>
+                  <button  class="btn-no-border btn-under-line-small" >What's new?</button>
+                  </p>
+   
+                
+             </span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- שאלות ותשובות -->
+    <div class="questions">
+      <span><h5>People also ask   <span class="material-symbols-outlined" id="dots">
+        more_vert
+      </span></span></h5></span>
+      <hr>
+      <span>Is GTA 5 free?</span>
+      <hr>
+      <span>Is there a release date for GTA 6?</span>
+      <hr>
+      <span>Is GTA 6 delayed?</span>
+      <hr>
+      <span>Will GTA 6 never come out?</span>
+      <span></span><hr>
+    </div>
+
+    <div class="card mb-3" style="max-width: 42rem;">
+      <span class="img-si">
+        <img src="img/steam.png" width="3%" class="gta-1-img">
+         <span class="Arts-Home-page">
+          Steam
+         </span> 
+      </span>
+      <cite class="https-gta" role="text">https://store.steampowered.com<span class="ylgVCe ob9lvb" role="text"> › app › Grand_Theft_Auto_5  <span class="material-symbols-outlined more" id="more-dots">
+        more_vert
+      </span></cite>
+      <div class="row g-0">
+        <div class="col-md-0">
+        </div>
+        <div class="col-md-12">
+          <div class="card-body">
+            <span class="card-gta">
+              <button class="btn-no-border btn-under-line">    Grand Theft Auto V on Steam</button>
+                <p class="card-text">The PC version of Grand Theft Auto V and Grand Theft Auto Online features First Person Mode, giving players the chance to explore the incredibly detailed world ...<br>
+                  <span class="starts">
+                    
+                    <i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><br>
+                  </span>
+                  <button  class="btn-no-border btn-under-line-small" >It's Free </button>
+                  <button  class="btn-no-border btn-under-line-small" >Game Packs</button>
+                  <button  class="btn-no-border btn-under-line-small" >New's & Updates</button>
+                  <button  class="btn-no-border btn-under-line-small" >Store</button>
+                </p>
+             </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card mb-3" style="max-width: 42rem;">
+      <span class="img-si">
+        <img src="img/icon-wiki.png" width="3%" class="gta-1-img">
+         <span class="Arts-Home-page">
+          Wikipedia
+         </span> 
+      </span>
+      <cite class="https-gta" role="text">https://en.wikipedia.org<span role="text"> › wiki › Grand_Theft_Auto  <span class="material-symbols-outlined more" id="more-dots">
+        more_vert
+      </span></span></cite>
+      <div class="row g-0">
+        <div class="col-md-0">
+        </div>
+        <div class="col-md-12">
+          <div class="card-body">
+            <img src="img/GTA.png" class="img-fluid2" alt="...">
+            <span class="card-gta">
+              <button class="btn-no-border btn-under-line">   Grand Theft Auto </button>
+                <p class="card-text">Grand Theft Auto <b>(GTA)</b> is an action-adventure video game series created by David Jones and Mike Dailly. ... Later titles were developed under the oversight of ...<br>
+             </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-3" style="max-width: 42rem;">
+      <span class="img-si">
+        <img src="img/playstation.png" width="3%" class="gta-1-img">
+         <span class="Arts-Home-page">
+          PlayStation
+         </span> 
+      </span>
+      <cite class="https-gta" role="text">https://www.playstation.com<span class="ylgVCe ob9lvb" role="text"> › Home › Games ›   <span class="material-symbols-outlined more" id="more-dots">
+        more_vert
+      </span></span></cite>
+      <div class="row g-0">
+        <div class="col-md-0">
+        </div>
+        <div class="col-md-12">
+          <div class="card-body">
+            <img src="img/Grand_Theft_Auto_V.png" class="img-fluid rounded-end" alt="...">
+            <span class="card-gta">
+              <button class="btn-no-border btn-under-line">    Grand Theft Auto V - PS4 & PS5 Games</button>
+                <p class="card-text">Grand Theft Auto Online. Experience GTA Online, an ever-evolving online universe where you can rise from street-level hustler to become a kingpin of your own ...
+                  ₪39.50
+                  <br>help <b>Gta 5</b> Grand Theft Auto V is a vast open world game set in Los Santos, a sprawling sun-soaked metropolis struggling to stay afloat in an era of economic ...<br>
+                  <span class="starts">
+             </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card mb-3" style="max-width: 42rem;">
+      <span class="img-si">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAY0lEQVR4AeUSxRHAMKj2Z/9J48Hqrr9yl+BO8TkAADLCuq71NU0j/OIdA4YQ0Fq39a4FyDnjDlwLgBP/GKMEfB5A+B8HEMfHAd6tUT7JOnl3A0zf+xam7PNTFllK6VkLG28AAtRidxl0FEd6AAAAAElFTkSuQmCC" width="3%" class="gta-1-img">
+         <span class="Arts-Home-page">
+          GTA Wiki
+         </span> 
+      </span>
+      <cite class="https-gta" role="text">https://gta.fandom.com<span role="text"> › wiki › Main_Page <span class="material-symbols-outlined more" id="more-dots">
+        more_vert
+      </span></span></cite>
+      <div class="row g-0">
+        <div class="col-md-0">
+        </div>
+        <div class="col-md-12">
+          <div class="card-body">
+            <span class="card-gta">
+              <button class="btn-no-border btn-under-line">    GTA Wiki - Fandom</button>
+                <p class="card-text">12 בספט׳ 2023 — The <b>GTA </b>Wiki is the biggest and best community-built database about the Grand Theft Auto series
+                <br>  on the web. The GTA wiki is dedicated to collecting all ...<br>
+             </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-3" style="max-width: 42rem;">
+      <span class="img-si">
+        <img src="img/xbox.png" width="3%" class="gta-1-img">
+         <span class="Arts-Home-page">
+          Xbox.com
+         </span> 
+      </span>
+      <cite class="https-gta" role="text">https://xbox.com<span role="text"> › en-US › games › store › grand-the... <span class="material-symbols-outlined more" id="more-dots">
+        more_vert
+      </span></span></cite>
+      <div class="row g-0">
+        <div class="col-md-0">
+        </div>
+        <div class="col-md-12">
+          <div class="card-body">
+            <span class="card-gta">
+              <button class="btn-no-border btn-under-line">    Get The Gta 5 now! </button>
+                <p class="card-text">Explore the stunning world of Los Santos and Blaine County in the ultimate Grand Theft Auto V experience, 
+                <br>  how <b>Gta 5</b> featuring a range of technical upgrades and ...<br>
+             </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card mb-3" style="max-width: 42rem;"> 
+      <span class="img-si">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAJ1BMVEX////49P/Uvv+BGP+ILv+XU//q3/+RRf/cy/+uf/+8mP+NPP+gZP8Sw1aOAAAAgElEQVR4AWOgMmAUBAMYV9kYBEygPCZXsTQgUIFyVUrBVAtUp3kpA5sCRwKM617KwOTAuQCZuwHBxZRlW8DUgOBCLEDhslmicJMnwLjlMydIzvRkgHOrA6K3TEBwy2O274R7z8S7vMRlAty7bRnbw9KQ/e8ugBIajqiBI0BWmAIAXH8h9TcGnrwAAAAASUVORK5CYII=" width="3%" class="gta-1-img">
+         <span class="Arts-Home-page">
+          Twitch
+         </span> 
+      </span>
+      <cite class="https-gta" role="text">https://www.twitch.tv<span role="text"> › Directory <span class="material-symbols-outlined more" id="more-dots">
+        more_vert
+      </span></span></cite>
+      <div class="row g-0">
+        <div class="col-md-0">
+        </div>
+        <div class="col-md-12">
+          <div class="card-body">
+            <span class="card-gta">
+              <button class="btn-no-border btn-under-line">    Grand Theft Auto V </button>
+                <p class="card-text">The <b>Grand Theft Auto</b> V is a vast open world game set in Los Santos, a sprawling sun-soaked metropolis struggling to stay afloat in an era of economic ...<br>
+             </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+
+
+    <div class="moreResults">
+      <button class="custom-button-results">More Results</button>
+      <span class="bottom-line"></span>
+
+    </div>
+  </div>
+
+  <!-- card 4 -->
+  
+  
+
+
+
+  
+        <div class="col-4">
+          <div class="line-gta-4" ></div>
+
+          <button class="gta-btn">Grand Theft Auto</button> <br>
+          Video game series<span class="material-symbols-outlined more" id="more-dots">
+            more_vert
+          </span>
+          <img src="img/Grand_Theft_Auto_logo.png" class="Big-gta-5-Photo"> <hr> 9.5/10 <button class="btn-steam">Reddit</button><br><br>
+
+          <div class="gta-Google-text">
+
+          
+          94% liked this video game <br> Google users <div class="like-unlike"><span class="material-symbols-outlined like" >
+            thumb_up
+            </span> <span class="material-symbols-outlined like">
+              thumb_down
+              </span></div>
+         <br><br>
+         Grand Theft Auto is an action-adventure video game series created by David Jones and Mike Dailly. Later titles were developed under the oversight of brothers Dan and Sam Houser, Leslie Benzies and Aaron Garbut.
+          <button class="btn-steam"> Wikipedia</button><br><br>
+
+
+          <div class="ctn-under-line-blue">
+          <b>Initial release date:</b> November 1997<br>
+          <b>Mode:</b> <button>Single-player</button>,<button>Multiplayer</button><br>
+          <b>License:</b> <button> GTA Online License Plate Creator license
+          </button><br>
+          <b>Composer:</b> <button> Woody Jackson</button><br>
+          <b>Genres:</b> <button> Action-adventure game</button>,<button> Nonlinear gameplay</button>,<button>  Third-person shooter</button>,<button>Strategy Video Game</button><br>
+          <b>Designers:</b> <button>Leslie Benzies</button>,<button>Imran Sarwar</button><br>
+          <b>Developers:</b> <button>Rockstar Games</button>,<button>Rockstar North</button>,<button>Grove Street Games</button><br><hr>
+        </div>
+      </div>
+
+      <button id="Rev">Reviews</button><br>
+      Audience rating summary
+      <img src="img/Rev.jpeg" width="88%"><br>
+      Rate and review<br>
+      <img src="img/icon-person.png" id="img-person">
+    <b>  Your review</b><br>
+        <span class="Posting">Posting publicly.</span><br>
+        <div class="Starts">
+          <span class="material-symbols-outlined">
+            star
+            </span>
+            <span class="material-symbols-outlined">
+              star
+              </span>
+              <span class="material-symbols-outlined">
+                star
+                </span>
+                <span class="material-symbols-outlined">
+                  star
+                  </span>
+                  <span class="material-symbols-outlined">
+                    star
+                    </span>
+
+      </div><br>
+      <div class="rate-and">
+        <input type="text"  class="rate-and-review" placeholder="What do you think of this game?">
+      
+      </div>
+      
+
+
+      <div class="card-reviews">
+        <div class="row">
+          <h6>Audience reviews</h6>
+          <div class="col-1">
+            <img src="img/gta-person1.png">
+          </div>
+          <div class="col-11">
+            I'll be honest I was hesitant to purchase GTA V for a 3rd time,  <br>
+           (PS3, PS4 & now PS5) but for $9.99 it's truly a worthy next gen upgrade. <br>
+            GTA V on the PlayStation 5 is truly remarkable. <br>
+            The biggest upgrade is the load times across the board, GTA online was so slow on my PS4  <br>
+            pro that I quit playing because the load times killed the vibe for me. I'm happy to report that is no <br>
+            longer an issue, online load times are literally 5x faster than PS4 & story mode is even faster... <br>
+            <div class="hr-gta">
+              <hr>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- כרטיס 2 -->
+      
+      <div class="card-reviews-2">
+        <div class="row">
+          <div class="col-1">
+              <img src="img/gta-person1.png">
+          </div>
+          <div class="col-11">
+            GTA V is a great game for the ones who love open-world games, I used to play GTA franchises such as GTA San Andreas, Vice City, <br>
+            GTA 3 and so many open-world games. But this game GTA V gives me a really interesting storyline and gameplay. GTA V, or Grand Theft Auto V. <br>
+            The masterpiece from Rockstar Games is a masterpiece of attracting story, engaging characters, and unrestricted freedom in the<br>
+            ‑ open world, setting the standard for modern gaming. 
+            Three characters, <br>
+            each with unique personalities, missions and objectives, are at the root of the story of Grand Theft Auto V.<br>
+            Trevor is one of the characters‑...<br>
+            <div class="hr-gta">
+              <hr>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <h6>People also search for</h6>
+      <div class="all-gta">
+        <img src="img/gta-v-the-manual.jpg" width="80px">
+        <img src="img/gta-plus.png" width="80px">
+        <img src="img/rockstar.png" width="90px">
+        <img src="img/gta-vice-city.png" width="80px" id="free">
+      </div>
+      <button class="custom-button">More about Grand Theft Auto</button>
+      </div>
+    </div>
+</div>
+
+</body>
+</html>

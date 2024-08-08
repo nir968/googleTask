@@ -1,0 +1,234 @@
+body {
+    background-color: #fff;
+}
+
+.main-container > * {
+    margin: 15px 0;
+}
+
+.buttons-container > * {
+    margin: 0 0 0 10px;
+}
+
+.buttons-container button {
+
+    color: #202124;
+    background-color: #f8f9fa;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+
+.buttons-container button:hover {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+    color: #202124;
+    
+}
+
+.buttons-container button:active {
+    color: #202124 !important;
+    background-color: #f8f9fa !important;
+}
+
+.main-container {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+    margin-top: 100px;
+    
+}
+
+.top-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-end; /* Align items to the end of the container */
+    height: 48px;
+    padding: 8px 16px; /* Padding to provide some space around the elements */
+    margin-top: 5px;
+}
+
+.icons-above {
+    display: flex; /* Use flexbox for layout */
+    gap: 16px; /* Gap between icons */
+    align-items: center; /* Align items vertically */
+}
+
+.dots-icon {
+    background-color: white;
+    width: 48px;
+    height: 48px;
+}
+
+
+.gmail-link {
+    padding-left: 15px;
+}
+
+.gmail-link a,
+.images-link a,
+.sign-in-icon button {
+    text-decoration: none; /* Remove underline from links and buttons */
+    font-weight: 200; /* Set font weight to match Google's font */
+    font-size: 15px; /* Set font size to match Google's font */
+    color: #000;
+    font-weight: 200;
+}
+
+
+.sign-in-icon button {
+    background: #8ab4f8;
+    border: 1px solid transparent;
+    box-shadow: none;
+    color: #202124;
+    width: 96px;
+    height: 35px;
+    border-radius: 4px;
+    font-weight: 400;
+}
+
+.gmail-link a:hover,
+.images-link a:hover {
+    text-decoration: underline 1px;
+}
+
+
+.material-symbols-outlined {
+    color: #5f6368;
+    opacity: 1;
+}
+
+.search-icon {
+    color: #9aa0a6;
+}
+
+
+/* search bar */
+
+/* Style for search bar container */
+.search-bar-container {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    flex-direction: row-reverse;
+    background-color: transparent;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    padding: 8px 16px;
+    width: 600px; 
+}
+
+.search-bar-container:hover {
+    background: #fff;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, .28);
+    border-color: transparent;
+}
+
+/* Style for search icon */
+.search-icon-svg {
+    fill: #757575;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+/* Style for mic icon */
+.mic-icon-svg {
+    fill: #4285f4;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+/* Style for camera icon */
+.camera-icon-svg {
+    fill: #ea4335;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+/* Style for input text */
+input[type="text"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+/* Style for placeholder text */
+input[type="text"]::placeholder {
+    color: #757575;
+}
+
+/* style for footer */
+
+.upDown {
+    display: flex;
+    justify-content: flex-start;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 29px;
+    font-size: 15px;
+    padding-bottom: 8px;
+    padding-top: 13px;
+    border-bottom: 1px solid #dadce0;
+    color: #202124;
+  }
+
+  .Lines {
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+  
+  .leftLinksV1 {
+    display: flex;
+    padding-left: 29px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .leftLinksV2 {
+    display: flex;
+    padding-left: 29px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  .Adjustment {
+    padding-right: 25px;
+    text-decoration: none;
+    color: #202124;
+  }
+  
+  .Adjustment:hover {
+    text-decoration: underline;
+  }
+
+  nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+  }
+
+  .google-offered {
+    font-size: 13px;
+    color: #4d5156;
+  }
+  .google-offered a {
+    color: #1a0dab;
+    text-decoration: none;
+    margin: 3px;
+  }
+  .google-offered a:hover {
+    text-decoration: underline;
+  }
+
